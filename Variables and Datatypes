@@ -1,0 +1,89 @@
+ 1.Write Java code to declare and initialize variables of different data types: integer, double, character, boolean, and string.
+
+public class VariableDeclaration {
+    public static void main(String[] args) {
+        // Declare and initialize variables
+        int num = 10;
+        double decimal = 3.14;
+        char letter = 'A';
+        boolean flag = true;
+        String text = "Hello, Java!";
+        
+        // Print variable values
+        System.out.println("Integer: " + num);
+        System.out.println("Double: " + decimal);
+        System.out.println("Character: " + letter);
+        System.out.println("Boolean: " + flag);
+        System.out.println("String: " + text);
+    }
+}
+
+
+2.Write Java code to convert a string to an integer and a double.
+
+public class TypeConversion {
+    public static void main(String[] args) {
+        // String to Integer conversion
+        String strNumber = "25";
+        int convertedInt = Integer.parseInt(strNumber);
+        System.out.println("String to Integer: " + convertedInt);
+        
+        // String to Double conversion
+        String strDecimal = "3.14";
+        double convertedDouble = Double.parseDouble(strDecimal);
+        System.out.println("String to Double: " + convertedDouble);
+    }
+}
+
+
+3.Write Java code to demonstrate variable scope by declaring variables at different levels (local, instance, class).
+
+public class VariableScope {
+    // Class-level variable
+    static int classVar = 10;
+
+    public void method() {
+        // Local variable
+        int localVar = 20;
+        System.out.println("Local variable: " + localVar);
+    }
+
+    public static void main(String[] args) {
+        VariableScope obj = new VariableScope();
+        obj.method();
+
+        // Accessing class-level variable
+        System.out.println("Class-level variable: " + classVar);
+    }
+}
+
+
+4.Write Java code to display the sizes (in bytes) of different primitive data types.
+public class DataTypeSizes {
+    public static void main(String[] args) {
+        System.out.println("Size of byte: " + Byte.SIZE / 8 + " bytes");
+        System.out.println("Size of short: " + Short.SIZE / 8 + " bytes");
+        System.out.println("Size of int: " + Integer.SIZE / 8 + " bytes");
+        System.out.println("Size of long: " + Long.SIZE / 8 + " bytes");
+        System.out.println("Size of float: " + Float.SIZE / 8 + " bytes");
+        System.out.println("Size of double: " + Double.SIZE / 8 + " bytes");
+        System.out.println("Size of char: " + Character.SIZE / 8 + " bytes");
+        System.out.println("Size of boolean: Not defined precisely");
+    }
+}
+
+
+5.Write Java code to demonstrate the use of constants and final variables.
+public class ConstantsExample {
+    // Constant variable
+    static final double PI = 3.14159;
+
+    public static void main(String[] args) {
+        final int constantVar = 100; // Final variable
+        System.out.println("Constant: " + PI);
+        System.out.println("Final variable: " + constantVar);
+
+        // Trying to modify a final variable results in a compilation error
+        // constantVar = 200; // Error: Cannot assign a value to final variable
+    }
+}
